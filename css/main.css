@@ -25,7 +25,8 @@ a img {border:none}
 #banner {
     background:url(../images/waterfly.jpg) -2px -1px no-repeat;
     border-bottom:1px solid #bbb;
-    height: 15vh;
+    height: 16vh;
+    min-height: 120px;
     max-height: 160px;
     width: 100%;
 }
@@ -38,7 +39,7 @@ a img {border:none}
     cursor:pointer;
     font-size:105%;
     font-style:italic;
-    margin:0;
+    margin:-12px 0 0;
     padding: 0 0 0.5em 0.5em;
     text-shadow:4px 4px 2px #bbb;
 }
@@ -147,27 +148,47 @@ div.atAGlance {
 }
 
 /* Coaches */
+
 #content div.coach {
     clear:both;
+    display: flex;
     margin:12px 0 0 28px;
 }
-#content div.coach span.name {
+#content div.coach div.name {
     font-weight:bold;
+    width: 25%;
 }
 #content div.quote img.coachPic {
     float:right;
     margin:6px 10px 6px 20px;
 }
+#content div.coach blockquote {
+    margin: 0;
+}
 #coaches {
     padding-bottom:100px;
 }
-#coaches span.name:hover {
+#coaches div.name:hover {
     color:#22f;
 }
 #coaches span.emailLine {
     display:block;
     margin-top:10px;
-    visibility:hidden;
+    /* visibility:hidden; */
+}
+#coaches .coachInfo {
+    display: none;
+    width: 60%;
+}
+#coaches .coach.active .coachInfo {
+    display: block;
+    margin-top: -80px;
+    margin-left: 20px;
+    border: 1px solid #aaa;
+    padding: 8px;
+}
+#coaches .coach.active .coachInfo img {
+    float: right;
 }
 #coaches em.instructions {
     display:none;
@@ -263,6 +284,16 @@ form#mailForm {
 }
 
 /* FAQ */
+#faq span.question {
+    cursor: pointer;
+    font-weight: bold;
+}
+#faq div.answer {
+    display: none;
+}
+#faq div.answer.active {
+    display: block;
+}
 #faq div.costs span.line {
     display: block;
     font-weight:normal;

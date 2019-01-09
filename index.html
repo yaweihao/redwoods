@@ -6,8 +6,6 @@
     <meta name="Description" content="Masters Swim Group in Mercer Island, Washington">
     <meta name="keywords" content="Masters Swim,Mercer Island,Swim,Masters">
     <link type="text/css" rel="stylesheet" href="./css/main.css">
-    <!--link type="text/css" rel="stylesheet" href="./js/slimbox/slimbox2.css"-->
-    <!--script type="text/javascript" src="/js/jquery.js"></script-->
 </head>
 <body>
     <div id="container">
@@ -55,6 +53,7 @@
     </div>
 </div>
 </script>
+
 <script type="text/plain" id="home-template">
 <transition name="fade">
 <div id="home">
@@ -166,96 +165,23 @@
 
     <em class="instructions" style="display: inline;">click name for bio</em>
 
-    <div class="coach DY"><span class="name" style="cursor: pointer;" title="click for Derek's bio"><span class="fname">Derek</span> Young</span>
-        <div class="quote DY" style="display: none;"><img style="" class="coachPic" alt="Derek Young" src="/coaching/swimcoach.gif">
-          <blockquote class="coachQuote">
-            “Derek moved to Seattle in April of 2018. Immediately prior to moving, Derek served as the Head Coach of the Sandhills Sand Sharks in Southern Pines, North Carolina and started the Masters swim program in Southern Pines. Before that he spent three years with Nation’s Capital Swim Team (NCAP) and the Arlington Aquatic Club. During his eight years on deck he has worked with swimmers of all ages and achievement levels.
-            <br><br>
-
-            Derek’s swimming career started in the Northern Virginia Swim League (NVSL) when he was 6 years old with an ill-fated relay appearance for the Lincolnia Park Lazers. In
-            addition to his local summer league team, Derek also swam for the Arlington Aquatic Club for 10 years. In 2000, Derek graduated with a degree in marketing from the
-            University of Maryland. At Maryland he was a member of the varsity swim team and letter winner.”
-          </blockquote>
-          <span class="emailLine" style="visibility: visible;">Email <a class="emailRel" rel="coach . dwyoung * gmail . com" href="mailto:coach.dwyoung@gmail.com">Derek</a></span>
+    <div class="coachList">
+        <div v-for="coach in coaches" :class="coachClass(coach)">
+            <div class="name" @click="toggle(coach)" :title="title(coach)">
+                <span class="fname">{{ coach.firstName }}</span>
+                {{ coach.lastName }}
+            </div>
+            <div :class="{coachInfo: true, active: coach.active}">
+                <img class="coachPic" :alt="coachName(coach)" :src="coach.img">
+                <blockquote class="coachQuote" v-html="coach.quote"></blockquote>
+                <span class="emailLine">Email
+                    <a class="emailRel" :href="email(coach)"> {{coach.firstName}}</a>
+                 </span>
+            </div>
         </div>
     </div>
 
-    <p id="otherCoaches"></p>
-
-    <div class="coach TG"><span class="name" style="cursor: pointer;" title="click for Tom's bio"><span class="fname">Tom</span> Grandine </span>
-        <div class="quote TG" style="display: none;"><img class="coachPic" alt="Tom" src="/coaching/TomG.png">
-          <blockquote class="coachQuote"> “I've been swimming seriously since I was a middle schooler, and my love for the sport and the activity only seems to grow with time. I've been swimming with the Redwoods since 2003, and I've enjoyed firsthand the amazing health benefits that accrue to middle-aged folk like me when they keep at it and keep in the water, and I have no plans to let up anytime soon. It's really true that life begins at 50!”</blockquote>
-          <span class="emailLine" style="visibility: visible;">Email <a class="emailRel" rel="tom  * grandine  . org" href="mailto:tom@grandine.org">Tom</a></span>
-        </div>
-    </div>
-
-    <div class="coach MS"><span class="name" style="cursor: pointer;" title="click for Mike's bio"><span class="fname">Mike</span> Schaeffer </span>
-        <div class="quote MS" style="display: none;"><img class="coachPic" alt="Mike" src="/coaching/MikeS.png">
-          <blockquote class="coachQuote"> “I made a late return to swimming in my 40s after a 20+ year hiatus, swimming in the slow lane at Redwoods workouts until I graduated up to swim next to (not <em>with</em>!) the big boys. Both of my children grew up swimming summer league at Mercerwood, and my daughter Katie went on to a career at the University of Washington. You can count on my workouts to be, umm, <em>interesting</em>.”</blockquote>
-          <span class="emailLine" style="visibility: visible;">Email <a class="emailRel" rel="margaux 56 * aol . com" href="mailto:margaux56@aol.com">Mike</a></span>
-        </div>
-    </div>
-
-    <div class="coach AG"><span class="name" style="cursor: pointer;" title="click for Alex's bio"><span class="fname">Alex</span> Goldstein </span>
-        <div class="quote AG" style="display: none;"><img class="coachPic" alt="Alex" src="/coaching/AlexG.png">
-          <blockquote class="coachQuote"> “Spoiled by the bath-like water temperatures of the South, I always try to keep moving and ignore suggestions that another 10 pounds is worth at least 2-3 degrees in water temp. I coached age group and master swim teams when younger but am now (somewhat) reconciled to the fact that youth will beat me in open water races and in the pool. Now get moving, just standing here watching you is making me cold!.”</blockquote>
-          <span class="emailLine" style="visibility: visible;">Email <a class="emailRel" rel="alex _s_ goldstein * hotmail . com" href="mailto:alex_s_goldstein@hotmail.com">Alex</a></span>
-        </div>
-    </div>
-
-    <div class="coach TR"><span class="name" style="cursor: pointer;" title="click for Tom's bio"><span class="fname">Tom</span> Robertson </span>
-        <div class="quote TR" style="display: none;"><img class="coachPic" alt="Tom" src="/coaching/TomR.png">
-          <blockquote class="coachQuote">“I was a collegiate swimmer of modest ability in the early 60's, diverted to marathon running for about 15 years, and returned to swimming with a couple of the original Redwoods about the same time that it became clear that both of my daughters were going to be far faster swimmers than I could ever hope to be. I'm a pulmonary doc at the UW with a professional hobby in the study of exercise physiology. I am now the oldest of the current Redwoods, and use myself as a subject in the study of loss of exercise capacity with aging.”</blockquote>
-          <span class="emailLine" style="visibility: visible;">Email <a class="emailRel" rel="tomrobt * u . washington . edu" href="mailto:tomrobt@u.washington.edu">Tom</a></span>
-        </div>
-    </div>
-
-    <div class="coach AD"><span class="name" style="cursor: pointer;" title="click for Adair's bio"><span class="fname">Adair</span> Dingle </span>
-        <div class="quote AD" style="display: none;"><img class="coachPic" alt="Adair" src="/coaching/AdairD.png">
-          <blockquote class="coachQuote">“I started masters swimming in my early 20s. I've been enjoying the camaraderie of the Redwoods since its inception, and have been attempting to acquire some body rotation for about that long too. Fin-addicted with a strong preference for backstroke, I love our morning workouts, especially when they are outdoors. As a coach, I tend to give long freestyle sets.”</blockquote>
-          <span class="emailLine" style="visibility: visible;">Email <a class="emailRel" rel="a . d . dingle * comcast . net" href="mailto:a.d.dingle@comcast.net">Adair</a></span>
-        </div>
-    </div>
-
-    <div class="coach QG"><span class="name" style="cursor: pointer;" title="click for Q's bio"><span class="fname">Q</span> Glaze </span>
-        <div class="quote QG" style="display: none;"><img class="coachPic" alt="Q" src="/coaching/QG.png">
-          <blockquote class="coachQuote">“Q Glaze, coach <em>extraordinaire</em>, honed her coaching skills under the tutelage of Midlakes' finest coaches of the 60's and 70's. Since recently returning to the coaching scene, she was stunned to learn that making athletes swim ungodly distances and the taking of steroids were no longer considered cutting edge training methods.<br><br>Not to worry. This is a masters group and she has adjusted her techniques. She promises not to make anyone swim longer than a 500 against their will. Her new motto is <em>you pay to do this, you can do whatever you want</em>.”</blockquote>
-          <span class="emailLine" style="visibility: visible;">Email <a class="emailRel" rel="q glaze * gmail . com" href="mailto:qglaze@gmail.com">Q</a></span>
-        </div>
-    </div>
-
-    <div class="coach SS"><span class="name" style="cursor: pointer;" title="click for Steve's bio"><span class="fname">Steve</span> Sussex </span>
-        <div class="quote SS" style="display: none;"><img class="coachPic" alt="Steve" src="/coaching/SteveS.png">
-          <blockquote class="coachQuote">“I grew up swimming in the Los Angeles area, where I could ride my unicycle a few blocks to an outdoor pool and swim in the sun. But that wasn't good enough, so I enrolled at the UW to ride my bike in the rain to morning workouts, indoors! And I've been here ever since, swimming with various masters groups throughout the years. For swim workouts, I personally like aerobic sets, like 20 x 100's. But when I coach, I like to write workouts that my friends would like to swim.  I love swimming with paddles, and the Redwoods' Friday morning coffee at Starbucks.”<br><br><em>[Editor's note: In the late '90s, Steve won his age group in the 400 meters at the Worlds Masters Championship, and we're very proud of him. He won't ever tell you, so we will.]</em></blockquote>
-          <span class="emailLine" style="visibility: visible;">Email <a class="emailRel" rel="swim guy 24 * gmail . com" href="mailto:swimguy24@gmail.com">Steve</a></span>
-        </div>
-    </div>
-
-    <!--
-    <div class="coach LR"><span class="name"><span class="fname">Liz</span> Rosen</span>
-        <div class="quote LR"><img class="coachPic" alt="Liz" src="/coaching/LizR.png"/>
-          <blockquote class="coachQuote">At the ripe ol’ age if 9 (I think) I started swimming year-round. Even then, I had only slow twitch muscles. By the time I got to high school, I realized I was a much better diver than a swimmer and made the switch to focus on that full time.  Diving on a club team became my life in HS and competed thru 4 years of college. Then after 10 years in a land-locked state, I returned to the NW, found masters swimming, took to it like a fish to water and never looked back. I prefer lakes and oceans to the pool, since I’ve pretty much got one speed. Give me a long freestyle set and I’m a happy camper.  What will I give you?  Likely something with a pattern.</blockquote>
-          <span class="emailLine">Email <a class="emailRel" rel="rosen . liz * hotmail . com">Liz</a></span>
-      </div>
-    </div>
-    -->
-
-    <div class="coach SU"><span class="name" style="cursor: pointer;" title="click for Steve's bio"><span class="fname">Steve</span> Underbrink</span>
-        <div class="quote SU" style="display: none;"><img class="coachPic" alt="Steve" src="/coaching/SteveU.png">
-          <blockquote class="coachQuote">Stay tuned!</blockquote>
-          <span class="emailLine" style="visibility: visible;">Email <a class="emailRel" rel="steven . l . underbrink* boeing . com" href="mailto:steven.l.underbrink@boeing.com">Steve</a></span>
-      </div>
-    </div>
-    <div class="coach SM"><span class="name" style="cursor: pointer;" title="click for Shannon's bio"><span class="fname">Shannon</span> McIntyre</span>
-        <div class="quote SM" style="display: none;"><img class="coachPic" alt="Shannon" src="/coaching/ShannonM.png">
-          <blockquote class="coachQuote">Stay tuned!</blockquote>
-          <span class="emailLine" style="visibility: visible;">Email <a class="emailRel" rel="wood swim 1 * gmail . com" href="mailto:woodswim1@gmail.com">Shannon</a></span>
-      </div>
-    </div>
-
-
-<div class="popup quote" style="display: none;"></div>
-
+    <div class="popup quote" style="display: none;"></div>
 
 </div>
 </transition>
@@ -279,7 +205,6 @@
         <h1>Frequently Asked Questions</h1>
         <h3>with frequently given answers</h3>
 
-
         <p>
             Although the group has been together for more than 15 years, the Mercer
             Island Redwoods formed as an official organization in June, 2010. Here are
@@ -288,117 +213,9 @@
         </p>
 
         <ol id="faq">
-            <li>
-                <span class="q" style="font-weight: bold; cursor: pointer;">
-                    How much does it cost to swim?
-                </span>
-
-                <div class="costs" style="display: none; font-weight: normal;">
-                    You can choose to pay quarterly if you plan to swim full-time, by the
-                    month, or by punch card. Quarterly and monthly MSC members pay a <span class="msc">reduced amount</span>.
-                    <span class="line"><span class="term">Quarterly</span><span class="cost">$325/<span class="msc">$160</span></span></span>
-                    <span class="line"><span class="term">Monthly</span><span class="cost">$120/<span class="msc">$60</span></span></span>
-                    <span class="line note">A 10-swim virtual punch-card is <b>$120</b>; or you can drop-in for any individual workout for <b>$12</b>.</span>
-                    <span class="line note">Young Masters (35 and under) can join for a quarterly rate of <b>$250</b>.</span>
-
-                    <p style="display: none; font-weight: normal;">
-                        Note - our contract with Mercerwood Shoreclub will be renewed during 2019. You can lock
-                        in the current rate by paying <b>$1300</b> for a yearly membership.
-                    </p>
-                </div>
-            </li>
-
-            <li>
-                <span class="q" style="font-weight: bold; cursor: pointer;">
-                    I'm planning to be gone for an entire month. Can I just pay 2/3 of a quarterly bill?
-                </span>
-
-                <p style="display: none; font-weight: normal;">
-                    We're not planning to kick people off the team for serially quitting and
-                    rejoining. That said, it's important to realize that there will be no long
-                    term benefit to playing those sorts of games. For example, if all of our
-                    members only paid for 11 months of MIR membership a year, we'd have to set
-                    monthly rates at 109.1% of what they would be if everyone just paid for 12
-                    months in order to pay our bills. Everyone ends up paying the exact same
-                    annual total anyway, it just makes budgeting and planning harder. The best
-                    way to keep rates low is for everyone to commit to being in it for the long
-                    haul so that we can plan lower rates for everyone without having to worry
-                    about contingency funds for when people periodically drop out for short
-                    periods.
-                </p>
-            </li>
-
-
-            <li>
-                <span class="q" style="font-weight: bold; cursor: pointer;">
-                    Who are the coaches?
-                </span>
-
-                <p style="display: none; font-weight: normal;">
-                    We are currently honored to have Derek Young run 4 weekly workouts; on Wednesdays we
-                    depend on one of several of our own members as a fill-in <em>guest coach</em>.
-                    Currently, certified coaches include Tom Grandine, Mike Schaeffer, Alex Goldstein,
-                    Tom Robertson, Adair Dingle, Q Glaze, Steve Sussex, Steve Underbrink,
-                    and Shannon McIntyre. Read more about all of our coaches
-                    <a href="/coaching/" rel="coaching" class="navItem">here</a>.
-                </p>
-            </li>
-
-            <li>
-                <span class="q" style="font-weight: bold; cursor: pointer;">
-                    Are guests welcome?
-                </span>
-
-                <p style="display: none; font-weight: normal;">
-                    By all means, yes. Those of you who haven't committed to swim with us
-                    regularly, but would nevertheless like to make appearances at our workouts
-                    from time to time, are welcome to do so. Please feel free to swim with us
-                    as often as you'd like. The drop-in fee for guest swimmers is $12; please
-                    leave that with the coach on deck as you enter.
-                </p>
-            </li>
-
-            <li>
-                <span class="q" style="font-weight: bold; cursor: pointer;">
-                    Is USMS registration required?
-                </span>
-
-                <p style="display: none; font-weight: normal;">
-                    Yes! USMS provides local teams like ours with the liability insurance
-                    coverage required by MSC, our host pool (as any other pool-renting facility
-                    requires). The <em>certificate of liability insurance</em> is provided by
-                    USMS free of charge, but only if all of our team members are also USMS
-                    members in good standing. There are plenty of other benefits to USMS
-                    membership; if you aren't already a member, you can register online
-                    at <a href="http://www.usms.org/reg/" target="_blank">www.usms.org</a>.
-                </p>
-            </li>
-
-            <li>
-                <span class="q" style="font-weight: bold; cursor: pointer;">
-                    When are fees due?
-                </span>
-
-                <p style="display: none; font-weight: normal;">
-                    Please arrange to pay for your membership at the beginning of each quarter.
-                    Make your check payable to <em>Mercer Island Redwoods</em> and deliver
-                    it to Tom Grandine or Mike Schaeffer at practice. Non-MSC
-                    members pay $325/quarter; MSC members pay $160/quarter.
-                </p>
-            </li>
-
-            <li>
-                <span class="q" style="font-weight: bold; cursor: pointer;">
-                    What happens on holidays?
-                </span>
-
-                <p style="display: none; font-weight: normal;">
-                    Normally, practices are scheduled for Monday-Friday mornings, regardless
-                    of whether or not it's a holiday (and, except in the summer, one Saturday
-                    morning each month). Check with the coach, or Tom Grandine or Mike Schaeffer
-                    at practice as each holiday draws near in case there are any exceptions;
-                    or check the workout/coaching schedule <a href="/calendar/" rel="calendar" class="navItem">here</a>.
-                </p>
+            <li v-for="q in qas">
+                <span class="question" @click="toggleActive(q.a)" v-html="q.q"></span>
+                <div class="answer" :class="q.a.clas" v-html="q.a.html"></div>
             </li>
         </ol>
     </div>
@@ -430,7 +247,6 @@
 </script>
 
 <script src="https://unpkg.com/vue"></script>
-<!--script type="text/javascript" src="/js/slimbox/slimbox2.js"></script-->
 <script type="text/javascript" src="./js/main.js"></script>
 <script type="text/javascript">
     document.addEventListener('DOMContentLoaded', function() {
