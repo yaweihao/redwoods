@@ -3,6 +3,7 @@ body {
     background: #fcfcfc 0 0 repeat;
     color:#000;
     font-family:sans-serif;
+    font-size: 16px;
     margin:0;
     padding:0;
 }
@@ -156,7 +157,7 @@ div.atAGlance {
 }
 #content div.coach div.name {
     font-weight:bold;
-    width: 25%;
+    width: 45%;
 }
 #content div.quote img.coachPic {
     float:right;
@@ -178,9 +179,10 @@ div.atAGlance {
 }
 #coaches .coachInfo {
     display: none;
-    width: 60%;
+    width: 50%;
 }
 #coaches .coach.active .coachInfo {
+    background-color: #eee;
     display: block;
     margin-top: -80px;
     margin-left: 20px;
@@ -189,6 +191,7 @@ div.atAGlance {
 }
 #coaches .coach.active .coachInfo img {
     float: right;
+    margin-left: 12px;
 }
 #coaches em.instructions {
     display:none;

@@ -197,7 +197,7 @@ Vue.component('faq-panel',{
                     q: 'Who are the coaches?',
                     a: {
                         clas: '',
-                        html: 'We are currently honored to have Derek Young run 4 weekly workouts; on Wednesdays we depend on one of several of our own members as a fill-in <em>guest coach</em>.  Currently, certified coaches include Tom Grandine, Mike Schaeffer, Alex Goldstein, Tom Robertson, Adair Dingle, Q Glaze, Steve Sussex, Steve Underbrink, and Shannon McIntyre. Read more about all of our coaches <a href="/coaching/" rel="coaching" class="navItem">here</a>.'
+                        html: 'We are currently honored to have Derek Young run 4 weekly workouts; on Wednesdays we depend on one of several of our own members as a fill-in <em>guest coach</em>.  Currently, certified coaches include Tom Grandine, Mike Schaeffer, Alex Goldstein, Tom Robertson, Adair Dingle, Q Glaze, Steve Sussex, Steve Underbrink, and Shannon McIntyre. Read more about all of our coaches <a href="#coaches" rel="coaching" class="navItem">here</a>.'
                     }
                 },
                 {
@@ -225,7 +225,7 @@ Vue.component('faq-panel',{
                     q: 'What happens on holidays?',
                     a: {
                         clas: '',
-                        html: 'Normally, practices are scheduled for Monday-Friday mornings, regardless of whether or not it\'s a holiday (and, except in the summer, one Saturday morning each month). Check with the coach, or Tom Grandine or Mike Schaeffer at practice as each holiday draws near in case there are any exceptions; or check the workout/coaching schedule <a href="/calendar/" rel="calendar" class="navItem">here</a>.'
+                        html: 'Normally, practices are scheduled for Monday-Friday mornings, regardless of whether or not it\'s a holiday (and, except in the summer, one Saturday morning each month). Check with the coach, or Tom Grandine or Mike Schaeffer at practice as each holiday draws near in case there are any exceptions; or check the workout/coaching schedule <a href="#schedule" rel="calendar" class="navItem">here</a>.'
                     }
                 },
             ]
@@ -237,91 +237,6 @@ Vue.component('contact-panel',{
     template: '#contact-template',
 });
 
-function coachPanel() {
-    $.fn.typewriter = function(options) {
-        options = Object.assign({speed:40,atStart:function(){},preType:function(){},atEnd:function(){},text:''},options);
-        return this.each(function() {
-            var $elm = $(this),
-                length,
-                text,
-                count = 1;
-
-            options.atStart($elm);
-            text = options.text;
-            length = text.length;
-            if (length) {
-                options.preType($elm);
-                var tmo = setTimeout(addText, options.speed);
-            }
-
-            function addText() {
-                var char = text.charAt(count);
-                if (char == '<') {
-                    while (text.charAt(count) != '>' && count <= length) count++;
-                }
-                $elm.html(text.substr(0, count));
-                $elm.width(); $elm.height(); // trigger reflow?
-                count++;
-                if (count <= length) {
-                    var tmo = setTimeout(addText,options.speed);
-                } else {
-                    options.atEnd($elm);
-                }
-            }
-        });
-    };
-    var $coaches = $('#coaches'),
-      $names = $coaches.find('span.name'),
-      $popup = $coaches.find('div.popup'),
-      curCoach = '';
-
-    function reveal($quote) {
-      var $blurb = $quote.find('.coachQuote'),
-          text = $blurb.html(),
-          coach,
-          $img;
-
-      $popup.hide().empty().append($quote.clone(true));
-      $popup.find('.coachQuote').text('');
-      resetEmail($popup);
-      $img = $popup.find('img').remove();
-      $popup.find('*').css('display','');
-      $popup.show();
-      $popup.find('.coachQuote')
-        .typewriter({
-            speed:7,
-            text:text,
-            atEnd:function($this) {
-               $img.css({'margin-top':'-150px','opacity':'0.01'});
-               $this.before($img);
-               $img.animate({'margin-top':'6px','opacity':'0.50'},1500,function() {
-                   $img.animate({'opacity':'0.99'},1000);
-               });
-           }
-        });
-    }
-
-    $coaches.find('div.quote').hide();
-    $coaches.find('em.instructions').show();
-    $coaches.find('.emailLine').css('visibility','visible');
-
-    $names.click(function(ev) {
-        var coach = this.parentNode,
-            thisCoach = coach.className.replace(/coach/,'').replace(/\s+/g,''),
-            $popup = $coaches.find('div.popup'),
-            $quote = $(coach).find('div.quote');
-
-        $popup.hide()
-             .off('click')
-             .on('click',function(){$popup.hide();})
-             .attr('className','popup '+thisCoach);
-        reveal($quote);
-    })
-    .css('cursor','pointer')
-    .each(function() {
-        $(this).attr('title','click for ' + $(this).find('.fname').text() + "'s bio");
-    });
-}
 
 function resetEmail(context) {
 	context = context || document.body;
@@ -341,9 +256,13 @@ function buildVue() {
             var vue = this,
                 hash = document.location.hash.slice(1);
             if (hash.length > 0) {
-                vue.active = hash;
+                vue.navTo(null,hash);
             }
-            coachPanel();
+            window.onhashchange = function(e) {
+                var locx = e.newURL.lastIndexOf('#'),
+                    loc = e.newURL.slice(locx+1);
+                vue.navTo(e,loc);
+            };
         },
         data: {
             active: 'home',
@@ -359,8 +278,19 @@ function buildVue() {
         el: '#main-content',
         methods: {
             navTo: function(e,page) {
-                var vue = this;
-                vue.active = page.replace(/^#/,'');
+                var vue = this,
+                    actName = function(loc) {
+                        return loc.replace(/^#/,'');
+                    },
+                    pageName = actName(page),
+                    actions = vue.actions.map(function(action) {
+                        return actName(action.href);
+                    });
+
+                if (actions.indexOf(pageName) > -1) {
+                    vue.active = pageName;
+                }
+
             }
         },
     });
