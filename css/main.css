@@ -1,13 +1,15 @@
 body {
-    background-color:#e6eef2;
+    background-color: #e6eef2;
     background: #fcfcfc 0 0 repeat;
-    color:#000;
-    font-family:sans-serif;
+    color: 000;
+    font-family: sans-serif;
     font-size: 16px;
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
 }
-a img {border:none}
+a img {
+    border: none;
+}
 .fade-enter-active,
 .fade-leave-active {
     transition: opacity 0.5s;
@@ -17,15 +19,15 @@ a img {border:none}
     opacity: 0;
 }
 #container {
-    background:url(../images/navBg.jpg) 0 0 repeat-y;
-    background-color:#f0f5f7;
-    border:1px solid #ddd;
+    background: url(../images/navBg.jpg) 0 0 repeat-y;
+    background-color: #f0f5f7;
+    border: 1px solid #ddd;
     position: relative;
-    width:100%;
+    width: 100%;
 }
 #banner {
-    background:url(../images/waterfly.jpg) -2px -1px no-repeat;
-    border-bottom:1px solid #bbb;
+    background: url(../images/waterfly.jpg) -2px -1px no-repeat;
+    border-bottom: 1px solid #bbb;
     height: 16vh;
     min-height: 120px;
     max-height: 160px;
@@ -36,17 +38,17 @@ a img {border:none}
     max-width: 100%;
 }
 #banner h2 {
-    color:#555;
-    cursor:pointer;
-    font-size:105%;
-    font-style:italic;
-    margin:-12px 0 0;
+    color: #555;
+    cursor: pointer;
+    font-size: 105%;
+    font-style: italic;
+    margin: -12px 0 0;
     padding: 0 0 0.5em 0.5em;
-    text-shadow:4px 4px 2px #bbb;
+    text-shadow: 4px 4px 2px #bbb;
 }
 #banner h2 span {
     cursor: default;
-    font-size:95%;
+    font-size: 95%;
     opacity: 0;
     transition: opacity 1.5s ease-out;
 }
@@ -61,229 +63,142 @@ a img {border:none}
     margin: 0.4em 1em;
 }
 #nav a.navItem {
-    color:#444;
-    font-size:93%;
-    margin:0 0 2px;
-    padding:2px 6px;
-    text-decoration:none;
-    text-shadow:2px 2px 3px #444;
+    color: #444;
+    font-size: 93%;
+    margin: 0 0 2px;
+    padding: 2px 6px;
+    text-decoration: none;
+    text-shadow: 2px 2px 3px #444;
 }
 #nav a.last {
-    margin-top:36px;
+    margin-top: 36px;
 }
 #nav a.active {
-    color:#00f;
-    font-style:italic;
-    outline:none;
+    color: #44c;
+    text-decoration: underline;
 }
-#nav a.navItem:hover {
-    /* background-color:#fff; */
+#nav a.navItem: hover {
+    /* background-color: #fff; */
     color: blue;
-    text-decoration:none;
+    text-decoration: none;
     text-shadow: 2px 2px 3px #22d;
 }
-#nav a.active:hover {
-    background-color:inherit;
+#nav a.active: hover {
+    background-color: inherit;
 }
 #copyright {
-    position:absolute;
-    bottom:2px;
-    right:8px;
-    font-size:70%;
-    color:#888;
+    position: absolute;
+    bottom: 2px;
+    right: 8px;
+    font-size: 70%;
+    color: #888;
 }
 #usms_logo {
     position: absolute;
-    bottom:2px;
+    bottom: 2px;
     left: 8px;
 }
 #content {
-    background-color:#f0f5f7;
-    padding:1em 1.5em 2em;
-    position:relative;
-    /* min-width:800px; */
+    background-color: #f0f5f7;
+    padding: 1em 1.5em 2em;
+    position: relative;
+    /* min-width: 800px; */
 }
 #content h2 {
-    margin-top:0;
+    margin-top: 0;
 }
 #content h1, #content h2, #content h3 {
-    text-shadow:4px 4px 2px #bbb;
+    text-shadow: 4px 4px 2px #bbb;
 }
 
 #viewFromHome,#atThePool {
-    float:right;
-    margin:0 8px 8px;
+    float: right;
+    margin: 0 8px 8px;
 }
 #atThePool {
-    display:none;
+    display: none;
 }
 #footer {
-    background-color:#e6eef2;
-    border-top:1px solid #ddd;
-    font-size:60%;
-    padding:0.1em 1em;
-    text-align:right;
+    background-color: #e6eef2;
+    border-top: 1px solid #ddd;
+    font-size: 60%;
+    padding: 0.1em 1em;
+    text-align: right;
 }
 div.clr {
-    clear:both;
-    height:1px;
+    clear: both;
+    height: 1px;
 }
 div.atAGlance {
-    border:1px solid #aaa;
-    margin:10px 4px;
-    padding:8px;
+    border: 1px solid #aaa;
+    margin: 10px 4px;
+    padding: 8px;
 }
 #atAGlance caption {
-    font-size:16px;
-    font-weight:bold;
-    text-align:left;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
 }
 #atAGlance th, #atAGlance td {
-    border:1px dotted #ccc;
-    padding:3px;
-    margin:1px;
-    text-align:left;
+    border: 1px dotted #ccc;
+    padding: 3px;
+    margin: 1px;
+    text-align: left;
 }
 #atAGlance th {
-    width:100px;
+    width: 100px;
 }
 
 /* Coaches */
 
 #content div.coach {
-    clear:both;
+    clear: both;
     display: flex;
-    margin:12px 0 0 28px;
+    margin: 12px 0 0 28px;
+    position: relative
 }
 #content div.coach div.name {
-    font-weight:bold;
+    font-weight: bold;
     width: 45%;
-}
-#content div.quote img.coachPic {
-    float:right;
-    margin:6px 10px 6px 20px;
 }
 #content div.coach blockquote {
     margin: 0;
 }
-#coaches {
-    padding-bottom:100px;
+.coachList {
+    padding-bottom: 160px;
 }
-#coaches div.name:hover {
-    color:#22f;
+#coaches div.name: hover {
+    color: #22f;
 }
 #coaches span.emailLine {
-    display:block;
-    margin-top:10px;
-    /* visibility:hidden; */
+    display: block;
+    margin-top: 10px;
+    /* visibility: hidden; */
 }
 #coaches .coachInfo {
     display: none;
-    width: 50%;
+    font-size: 13px;
+    position: absolute;
+    right: 4px;
+    top: -140px;
+    width: 75%;
+    z-index: 10;
 }
 #coaches .coach.active .coachInfo {
     background-color: #eee;
-    display: block;
-    margin-top: -80px;
-    margin-left: 20px;
     border: 1px solid #aaa;
+    display: block;
     padding: 8px;
 }
 #coaches .coach.active .coachInfo img {
     float: right;
-    margin-left: 12px;
-}
-#coaches em.instructions {
-    display:none;
-    font-size:80%;
-    font-weight:bold;
-    margin:-8px 0 0 8px;
-}
-#coaches div.popup {
-    background:#eef;
-    border:1px solid #888;
-    border-radius:3px;
-    box-shadow:4px 8px 16px #444;
-    display:none;
-    font-size:12px;
-    min-height:200px;
-    left:300px;
-    margin-right:10px;
-    overflow:hidden;
-    padding:6px;
-    position:absolute;
-    top:10px;
-}
-#coaches div.popup blockquote {
-    margin-left:20px;
-}
-#coaches div.popup.KDL { top:100px; height:400px; }
-#coaches div.popup.DY { top:100px; height:470px; }
-#coaches div.popup.KS { top:235px;}
-#coaches div.popup.LP { top:265px;}
-#coaches div.popup.BH { top:290px; height:316px; }
-#coaches div.popup.TG { top:290px;}
-#coaches div.popup.MS { top:290px;}
-#coaches div.popup.AG { top:295px;}
-#coaches div.popup.TR { top:295px; height:230px;}
-#coaches div.popup.AD { top:295px;}
-#coaches div.popup.QG { top:295px; height:270px; }
-#coaches div.popup.SS { top:295px; height:310px; }
-/*#coaches div.popup.JM { top:315px; height:240px; }*/
-#coaches div.popup.LR { top:315px; height:220px; }
-#coaches div.popup.SU { top:315px; height:150px; }
-#coaches div.popup.SM { top:325px; height:150px; }
-#coaches div.popup.HT { top:335px; height:150px; }
-
-#coaches div.popup span.emailLine {
-    bottom:12px;
-    left:25px;
-    position:absolute;
-}
-#otherCoaches {
-    border-top:1px dotted #ccc;
-    margin-top:40px;
-    padding:4px 0;
+    margin: 6px 10px 6px 20px;
+    max-width: 45%;
 }
 /* schedule */
 #schedule iframe {
     width: 90vw;
     height: 75vw;
-}
-/* contact form */
-form#mailForm {
-    border:1px dotted #ccc;
-    padding:0 4px 10px;
-}
-#mailForm div.formElm {
-    margin:8px 0 4px;
-}
-#mailForm div.formElm input.text {
-    /* width:400px; */
-}
-#mailForm div.formElm label span {
-    display:block;
-    float:left;
-    width:13em;
-}
-#mailForm input.formErr, textarea.formErr {
-    background:#fee;
-}
-#mailForm #errs {
-    background: #fee;
-    border:1px solid #dcc;
-    display:none;
-    font-size:90%;
-    padding:8px 20px;
-}
-#mailForm #errs li {
-    font-style:italic;
-}
-#mailForm #errs.formErr {
-    display:block;
-}
-#mailForm #mailSent {
-    display:none;
 }
 
 /* FAQ */
@@ -299,26 +214,26 @@ form#mailForm {
 }
 #faq div.costs span.line {
     display: block;
-    font-weight:normal;
-    margin:6px 0;
+    font-weight: normal;
+    margin: 6px 0;
 }
 #faq .costs .line span {
     display: inline-block;
 }
 #faq .costs span.term {
-    width:120px;
-    margin-left:10px;
+    width: 120px;
+    margin-left: 10px;
 }
 #faq .costs span.cost {
-    width:240px;
+    width: 240px;
 }
 #faq .costs .msc {
-    color:#888;
+    color: #888;
 }
 #faq li .active {
-    border:1px dotted #bbb;
-    border-radius:5px;
-    box-shadow:4px 8px 16px #888;
-    margin-top:2px;
-    padding:6px;
+    border: 1px dotted #bbb;
+    border-radius: 5px;
+    box-shadow: 4px 8px 16px #888;
+    margin-top: 2px;
+    padding: 6px;
 }

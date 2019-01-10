@@ -277,6 +277,10 @@ function buildVue() {
         template: '#content-template',
         el: '#main-content',
         methods: {
+            isActive: function(action) {
+                var vue = this;
+                return action.name.toLowerCase() === vue.active ? 'active' : '';
+            },
             navTo: function(e,page) {
                 var vue = this,
                     actName = function(loc) {

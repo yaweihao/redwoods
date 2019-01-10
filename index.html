@@ -33,30 +33,41 @@
 <script type="vue-template/text" id="content-template">
 <div id="content">
     <div id="nav">
-        <a class="navItem" v-for="action in actions" :href="action.href" @click="navTo($event,action.href)">{{action.name}}</a>
+        <a class="navItem" v-for="act in actions" :class="isActive(act)":href="act.href" @click="navTo($event,act.href)">
+            {{act.name}}
+        </a>
     </div>
     <div id="body">
         <div v-show="active === 'home'">
-            <home-panel></home-panel>
+            <transition name="fade">
+                <home-panel></home-panel>
+            </transition>
         </div>
         <div v-show="active === 'coaches'">
-            <coaches-panel></coaches-panel>
+            <transition name="fade">
+                <coaches-panel></coaches-panel>
+            </transition>
         </div>
         <div v-show="active === 'schedule'">
-            <schedule-panel></schedule-panel>
+            <transition name="fade">
+                <schedule-panel></schedule-panel>
+            </transition>
         </div>
         <div v-show="active === 'faq'">
-            <faq-panel></faq-panel>
+            <transition name="fade">
+                <faq-panel></faq-panel>
+            </transition>
         </div>
         <div v-show="active === 'contact'">
-            <contact-panel></contact-panel>
+            <transition name="fade">
+                <contact-panel></contact-panel>
+            </transition>
         </div>
     </div>
 </div>
 </script>
 
 <script type="text/plain" id="home-template">
-<transition name="fade">
 <div id="home">
 
     <h2>A Masters Swim Group in Mercer Island, Washington</h2>
@@ -141,11 +152,9 @@
         </li>
     </ul>
 </div>
-</transition>
 </script>
 
 <script type="text-plain" id="coaches-template">
-<transition name="fade">
 <div id="coaches">
     <h2> Coaches </h2>
     <p>
@@ -164,8 +173,6 @@
         </li>
     </ul>
 
-    <em class="instructions" style="display: inline;">click name for bio</em>
-
     <div class="coachList">
         <div v-for="coach in coaches" :class="coachClass(coach)">
             <div class="name" @click="toggle(coach)" :title="title(coach)">
@@ -181,27 +188,20 @@
             </div>
         </div>
     </div>
-
-    <div class="popup quote" style="display: none;"></div>
-
 </div>
-</transition>
 </script>
 
 
 <script type="text/plain" id="schedule-template">
-<transition name="fade">
     <div id="schedule" style="left: 0px;">
         <a name="calendar"></a>
         <iframe src="http://www.google.com/calendar/embed?src=pd2gdne8ii9vrra4ehrpt0sccg%40group.calendar.google.com&amp;ctz=America/Los_Angeles" style="border: 0" scrolling="no" frameborder="0">
         </iframe>
 
     </div>
-</transition>
 </script>
 
 <script type="text/plain" id="faq-template">
-<transition name="fade">
     <div id="faq-section">
         <h1>Frequently Asked Questions</h1>
         <h3>with frequently given answers</h3>
@@ -220,11 +220,9 @@
             </li>
         </ol>
     </div>
-</transition>
 </script>
 
 <script type="text/plain" id="contact-template">
-<transition name="fade">
     <div id="contact-us" style="left: 0px;"><h2> Contact Us </h2>
     <p>
         You can contact our group in one of these ways:
@@ -244,7 +242,6 @@
         </li>
     </ul>
 </div>
-</transition>
 </script>
 
 <script src="https://unpkg.com/vue"></script>
