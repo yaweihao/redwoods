@@ -132,6 +132,10 @@ Vue.component('coaches-panel',{
                 count++;
                 if (count < textLength) {
                     vue.coachTmo = setTimeout(addText,10);
+                } else {
+                    vue.coachTmo = setTimeout(function() {
+                        vue.toggle(coach);
+                    },5000);
                 }
             }
             vue.coaches.forEach(function(coach) {
