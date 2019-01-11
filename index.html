@@ -6,7 +6,7 @@
     <title>Mercer Island Redwoods - A Masters Swim Group</title>
     <meta name="Description" content="Masters Swim Group in Mercer Island, Washington">
     <meta name="keywords" content="Masters Swim,Mercer Island,Swim,Masters">
-    <link type="text/css" rel="stylesheet" href="./css/main.css">
+    <link type="text/css" rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <div id="container">
@@ -245,20 +245,6 @@
 </script>
 
 <script src="https://unpkg.com/vue"></script>
-<script type="text/javascript" src="./js/main.js"></script>
-<script type="text/javascript">
-    document.addEventListener('DOMContentLoaded', function() {
-        var fakeElm = {textContent: null, addEventListener: function() {}};
-        var fCY = document.querySelector('#footerCopyrightYear') || fakeElm,
-            lda = document.querySelector('#lda') || fakeElm;
-
-        fCY.textContent = (new Date).getFullYear();
-        lda.addEventListener('click',function(e) {
-            var desc = document.querySelector('#lda > span');
-            desc.classList.add('show');
-            setTimeout(function() {desc.classList.remove('show');},6000);
-        });
-    });
-</script>
+<script src="js/main.js"></script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 body {
     background-color: #e6eef2;
     background: #fcfcfc 0 0 repeat;
-    color: 000;
+    color: #000;
     font-family: sans-serif;
     font-size: 16px;
     margin: 0;
@@ -19,7 +19,6 @@ a img {
     opacity: 0;
 }
 #container {
-    background: url(../images/navBg.jpg) 0 0 repeat-y;
     background-color: #f0f5f7;
     border: 1px solid #ddd;
     position: relative;
@@ -102,7 +101,6 @@ a img {
     background-color: #f0f5f7;
     padding: 1em 1.5em 2em;
     position: relative;
-    /* min-width: 800px; */
 }
 #content h2 {
     margin-top: 0;
@@ -114,6 +112,7 @@ a img {
 #viewFromHome,#atThePool {
     float: right;
     margin: 0 8px 8px;
+    max-width: 60%;
 }
 #atThePool {
     display: none;
@@ -211,6 +210,7 @@ div.atAGlance {
 }
 #faq div.answer.active {
     display: block;
+    margin-bottom: 16px;
 }
 #faq div.costs span.line {
     display: block;
@@ -229,6 +229,9 @@ div.atAGlance {
 }
 #faq .costs .msc {
     color: #888;
+}
+#faq li {
+    margin-bottom: 8px;
 }
 #faq li .active {
     border: 1px dotted #bbb;

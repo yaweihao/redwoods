@@ -305,3 +305,19 @@ function buildVue() {
 }
 
 buildVue();
+
+(function() {
+    document.addEventListener('DOMContentLoaded', function() {
+        var fakeElm = {textContent: null, addEventListener: function() {}};
+        var fCY = document.querySelector('#footerCopyrightYear') || fakeElm,
+            lda = document.querySelector('#lda') || fakeElm;
+
+        fCY.textContent = (new Date()).getFullYear();
+        lda.addEventListener('click',function(e) {
+            var desc = document.querySelector('#lda > span');
+            desc.classList.add('show');
+            setTimeout(function() {desc.classList.remove('show');},6000);
+        });
+    });
+}());
+
