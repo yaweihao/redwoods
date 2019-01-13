@@ -21,14 +21,17 @@ a img {
 #container {
     background-color: #f0f5f7;
     border: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    flex-flow: column;
+    min-height: 98vh;
     position: relative;
     width: 100%;
 }
 #banner {
     background: url(../images/waterfly.jpg) -2px -1px no-repeat;
     border-bottom: 1px solid #bbb;
-    height: 16vh;
-    min-height: 120px;
+    min-height: 12vh;
     max-height: 160px;
     width: 100%;
 }
@@ -99,6 +102,7 @@ a img {
 }
 #content {
     background-color: #f0f5f7;
+    flex: 2;
     padding: 1em 1.5em 2em;
     position: relative;
 }

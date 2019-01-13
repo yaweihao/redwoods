@@ -16,7 +16,7 @@ Vue.component('coaches-panel',{
                     img: './images/coaches/swimcoach.gif',
                     inits: 'DY',
                     lastName: 'Young',
-                    quote: '"Derek moved to Seattle in April of 2018. Immediately prior to moving, Derek served as the Head Coach of the Sandhills Sand Sharks in Southern Pines, North Carolina and started the Masters swim program in Southern Pines. Before that he spent three years with Nation’s Capital Swim Team (NCAP) and the Arlington Aquatic Club. During his eight years on deck he has worked with swimmers of all ages and achievement levels.  <br><br> Derek’s swimming career started in the Northern Virginia Swim League (NVSL) when he was 6 years old with an ill-fated relay appearance for the Lincolnia Park Lazers. In addition to his local summer league team, Derek also swam for the Arlington Aquatic Club for 10 years. In 2000, Derek graduated with a degree in marketing from the University of Maryland. At Maryland he was a member of the varsity swim team and letter winner.”'
+                    quote: '"Derek moved to Seattle in April of 2018. Immediately prior to moving, Derek served as the Head Coach of the Sandhills Sand Sharks in Southern Pines, North Carolina and started the Masters swim program in Southern Pines. Before that he spent three years with Nation’s Capital Swim Team (NCAP) and the Arlington Aquatic Club. During his eight years on deck he has worked with swimmers of all ages and achievement levels.  <br><br> Derek’s swimming career started in the Northern Virginia Swim League (NVSL) when he was 6 years old with an ill-fated relay appearance for the Lincolnia Park Lazers. In addition to his local summer league team, Derek also swam for the Arlington Aquatic Club for 10 years. In 2000, Derek graduated with a degree in marketing from the University of Maryland. At Maryland he was a member of the varsity swim team and letter winner."'
                 },
                 {
                     active: false,
@@ -43,7 +43,7 @@ Vue.component('coaches-panel',{
                     img: './images/coaches/AlexG.png',
                     inits: 'AG',
                     lastName: 'Goldstein',
-                    quote: '“Spoiled by the bath-like water temperatures of the South, I always try to keep moving and ignore suggestions that another 10 pounds is worth at least 2-3 degrees in water temp. I coached age group and master swim teams when younger but am now (somewhat) reconciled to the fact that youth will beat me in open water races and in the pool. Now get moving, just standing here watching you is making me cold!.”',
+                    quote: '"Spoiled by the bath-like water temperatures of the South, I always try to keep moving and ignore suggestions that another 10 pounds is worth at least 2-3 degrees in water temp. I coached age group and master swim teams when younger but am now (somewhat) reconciled to the fact that youth will beat me in open water races and in the pool. Now get moving, just standing here watching you is making me cold!."',
                 },
                 {
                     active: false,
@@ -52,7 +52,7 @@ Vue.component('coaches-panel',{
                     img: './images/coaches/TomR.png',
                     inits: 'TR',
                     lastName: 'Robertson',
-                    quote: '“I was a collegiate swimmer of modest ability in the early 60\'s, diverted to marathon running for about 15 years, and returned to swimming with a couple of the original Redwoods about the same time that it became clear that both of my daughters were going to be far faster swimmers than I could ever hope to be. I\'m a pulmonary doc at the UW with a professional hobby in the study of exercise physiology. I am now the oldest of the current Redwoods, and use myself as a subject in the study of loss of exercise capacity with aging.”',
+                    quote: '"I was a collegiate swimmer of modest ability in the early 60\'s, diverted to marathon running for about 15 years, and returned to swimming with a couple of the original Redwoods about the same time that it became clear that both of my daughters were going to be far faster swimmers than I could ever hope to be. I\'m a pulmonary doc at the UW with a professional hobby in the study of exercise physiology. I am now the oldest of the current Redwoods, and use myself as a subject in the study of loss of exercise capacity with aging."',
                 },
                 {
                     active: false,
@@ -61,7 +61,7 @@ Vue.component('coaches-panel',{
                     img: './images/coaches/AdairD.png',
                     inits: 'AD',
                     lastName: 'Dingle',
-                    quote: '“I started masters swimming in my early 20s. I\'ve been enjoying the camaraderie of the Redwoods since its inception, and have been attempting to acquire some body rotation for about that long too. Fin-addicted with a strong preference for backstroke, I love our morning workouts, especially when they are outdoors. As a coach, I tend to give long freestyle sets.”',
+                    quote: '"I started masters swimming in my early 20s. I\'ve been enjoying the camaraderie of the Redwoods since its inception, and have been attempting to acquire some body rotation for about that long too. Fin-addicted with a strong preference for backstroke, I love our morning workouts, especially when they are outdoors. As a coach, I tend to give long freestyle sets."',
                 },
                 {
                     active: false,
@@ -70,7 +70,7 @@ Vue.component('coaches-panel',{
                     img: './images/coaches/QG.png',
                     inits: 'QG',
                     lastName: 'Glaze',
-                    quote: '“Q Glaze, coach <em>extraordinaire</em>, honed her coaching skills under the tutelage of Midlakes\' finest coaches of the 60\'s and 70\'s. Since recently returning to the coaching scene, she was stunned to learn that making athletes swim ungodly distances and the taking of steroids were no longer considered cutting edge training methods.<br><br>Not to worry. This is a masters group and she has adjusted her techniques. She promises not to make anyone swim longer than a 500 against their will. Her new motto is <em>you pay to do this, you can do whatever you want</em>.”',
+                    quote: '"Q Glaze, coach <em>extraordinaire</em>, honed her coaching skills under the tutelage of Midlakes\' finest coaches of the 60\'s and 70\'s. Since recently returning to the coaching scene, she was stunned to learn that making athletes swim ungodly distances and the taking of steroids were no longer considered cutting edge training methods.<br><br>Not to worry. This is a masters group and she has adjusted her techniques. She promises not to make anyone swim longer than a 500 against their will. Her new motto is <em>you pay to do this, you can do whatever you want</em>."',
                 },
                 {
                     active: false,
@@ -79,7 +79,7 @@ Vue.component('coaches-panel',{
                     img: './images/coaches/SteveS.png',
                     inits: 'SS',
                     lastName: 'Sussex',
-                    quote: '“I grew up swimming in the Los Angeles area, where I could ride my unicycle a few blocks to an outdoor pool and swim in the sun. But that wasn\'t good enough, so I enrolled at the UW to ride my bike in the rain to morning workouts, indoors! And I\'ve been here ever since, swimming with various masters groups throughout the years. For swim workouts, I personally like aerobic sets, like 20 x 100\'s. But when I coach, I like to write workouts that my friends would like to swim.  I love swimming with paddles, and the Redwoods\' Friday morning coffee at Starbucks.”<br><br><em>[Editor\'s note: In the late \'90s, Steve won his age group in the 400 meters at the Worlds Masters Championship, and we\'re very proud of him. He won\'t ever tell you, so we will.]</em>',
+                    quote: '"I grew up swimming in the Los Angeles area, where I could ride my unicycle a few blocks to an outdoor pool and swim in the sun. But that wasn\'t good enough, so I enrolled at the UW to ride my bike in the rain to morning workouts, indoors! And I\'ve been here ever since, swimming with various masters groups throughout the years. For swim workouts, I personally like aerobic sets, like 20 x 100\'s. But when I coach, I like to write workouts that my friends would like to swim.  I love swimming with paddles, and the Redwoods\' Friday morning coffee at Starbucks."<br><br><em>[Editor\'s note: In the late \'90s, Steve won his age group in the 400 meters at the Worlds Masters Championship, and we\'re very proud of him. He won\'t ever tell you, so we will.]</em>',
                 },
                 {
                     active: false,
@@ -239,74 +239,83 @@ Vue.component('faq-panel',{
 Vue.component('contact-panel',{
     name: 'ContactPanel',
     template: '#contact-template',
+    data: function() {
+        return {
+            who: {
+                tom: 'tom @ grandine . org',
+                mike: 'margaux56 * aol . com',
+                list: ' mi - redwoods - request * freelists . org'
+            }
+        };
+    },
+    methods: {
+        email: function(str) {
+            var vue = this,
+                who = vue.who[str];
+            return who.replace(/\s+/g,'').replace(/\*/,'@');
+        },
+        mailto: function(who) {
+            var vue = this;
+            return 'mailto:' + vue.email(who);
+        },
+    }
 });
 
-
-function resetEmail(context) {
-	context = context || document.body;
-	$('a.emailAddr',context).each(function() {this.href = 'mailto:' + $(this).text();});
-	$('a.emailRel',context).each(function() {
-		this.href = 'mailto:' + this.rel.replace(/\s+/g,'').replace(/\*/,'@');
-	});
-}
-
-function buildVue() {
-    var vue;
-
-    window.mirVue =
-    vue = new Vue({
-        name: 'mirVue',
-        mounted: function() {
-            var vue = this,
-                hash = document.location.hash.slice(1);
-            if (hash.length > 0) {
-                vue.navTo(null,hash);
-            }
-            window.onhashchange = function(e) {
-                var locx = e.newURL.lastIndexOf('#'),
-                    loc = e.newURL.slice(locx+1);
-                vue.navTo(e,loc);
-            };
-        },
-        data: {
-            active: 'home',
-            actions: [
-                {href: '#home', name: 'Home'},
-                {href: '#coaches', name: 'Coaches'},
-                {href: '#schedule', name: 'Schedule'},
-                {href: '#faq', name: 'FAQ'},
-                {href: '#contact', name: 'Contact'}
-            ]
-        },
-        template: '#content-template',
-        el: '#main-content',
-        methods: {
-            isActive: function(action) {
-                var vue = this;
-                return action.name.toLowerCase() === vue.active ? 'active' : '';
-            },
-            navTo: function(e,page) {
-                var vue = this,
-                    actName = function(loc) {
-                        return loc.replace(/^#/,'');
-                    },
-                    pageName = actName(page),
-                    actions = vue.actions.map(function(action) {
-                        return actName(action.href);
-                    });
-
-                if (actions.indexOf(pageName) > -1) {
-                    vue.active = pageName;
-                }
-
-            }
-        },
-    });
-}
-
-buildVue();
-
 (function() {
+
+    function buildVue() {
+        var vue;
+
+        window.mirVue =
+        vue = new Vue({
+            name: 'mirVue',
+            mounted: function() {
+                var vue = this,
+                    hash = document.location.hash.slice(1);
+                if (hash.length > 0) {
+                    vue.navTo(null,hash);
+                }
+                window.onhashchange = function(e) {
+                    var locx = e.newURL.lastIndexOf('#'),
+                        loc = e.newURL.slice(locx+1);
+                    vue.navTo(e,loc);
+                };
+            },
+            data: {
+                active: 'home',
+                actions: [
+                    {href: '#home', name: 'Home'},
+                    {href: '#coaches', name: 'Coaches'},
+                    {href: '#schedule', name: 'Schedule'},
+                    {href: '#faq', name: 'FAQ'},
+                    {href: '#contact', name: 'Contact'}
+                ]
+            },
+            template: '#content-template',
+            el: '#main-content',
+            methods: {
+                isActive: function(action) {
+                    var vue = this;
+                    return action.name.toLowerCase() === vue.active ? 'active' : '';
+                },
+                navTo: function(e,page) {
+                    var vue = this,
+                        actName = function(loc) {
+                            return loc.replace(/^#/,'');
+                        },
+                        pageName = actName(page),
+                        actions = vue.actions.map(function(action) {
+                            return actName(action.href);
+                        });
+
+                    if (actions.indexOf(pageName) > -1) {
+                        vue.active = pageName;
+                    }
+
+                }
+            },
+        });
+    }
     document.addEventListener('DOMContentLoaded', function() {
         var fakeElm = {textContent: null, addEventListener: function() {}};
         var fCY = document.querySelector('#footerCopyrightYear') || fakeElm,
@@ -319,5 +328,6 @@ buildVue();
             setTimeout(function() {desc.classList.remove('show');},6000);
         });
     });
+    buildVue();
 }());
 

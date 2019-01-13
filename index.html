@@ -231,20 +231,19 @@
     <ul>
         <li>
             Join our mailing list, at <a href="http://www.freelists.org/list/mi-redwoods">http://www.freelists.org/list/mi-redwoods</a>,
-            or simply send an email to <a class="emailRel" rel="mi-redwoods-request * freelists . org"
-                href="mailto:mi-redwoods-request@freelists.org">mi-redwoods<!-- ignore -->-request@<!-- this too -->freelists.org</a>.<br>
+            or simply send an email to <a v-text="email('list')" :href="mailto('list')"></a>.<br>
             This is a private list (to avoid spam). After you've joined, you'll receive all club-wide emails.
         </li>
         <li>
             Email one of the Redwood headwoods:
-            <a class="emailRel" rel="tom * grandine . org" href="mailto:tom@grandine.org">Tom Grandine</a>, or
-            <a class="emailRel" rel="margaux56 * aol .com" href="mailto:margaux56@aol.com">Mike Schaeffer</a>.
+            <a :href="mailto('tom')">Tom Grandine</a>, or
+            <a :href="mailto('mike')">Mike Schaeffer</a>.
         </li>
     </ul>
 </div>
 </script>
 
-<script src="https://unpkg.com/vue"></script>
+<script src="https://unpkg.com/vue@2.5.22/dist/vue.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
