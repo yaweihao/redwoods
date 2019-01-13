@@ -90,10 +90,10 @@ a img {
 }
 #copyright {
     position: absolute;
-    bottom: 2px;
+    bottom: 4px;
     right: 8px;
     font-size: 70%;
-    color: #888;
+    color: #444;
 }
 #usms_logo {
     position: absolute;
@@ -167,9 +167,15 @@ div.atAGlance {
 #content div.coach blockquote {
     margin: 0;
 }
-.coachList {
-    padding-bottom: 160px;
+/* .coachList { */
+/*     display: flex; */
+/*     flex-direction: column; */
+/* } */
+.coachList .quoteShadow {
+    width: 80%;
+    visibility: hidden;
 }
+
 #coaches div.name: hover {
     color: #22f;
 }

@@ -97,7 +97,7 @@ Vue.component('coaches-panel',{
                     img: './images/coaches/ShannonM.png',
                     inits: 'SM',
                     lastName: 'McIntyre',
-                    quote: 'Stay tuned!',
+                    quote: 'Coach Shannon began her swimming career in Southern California in 1980. Her accolades and honors include:<ul><li>Top 25 World Rankings in 1982 in the 100 and 200 M Breaststroke</li><li>1984 Olympic Trial Qualifier in the 100 and 200 M Breaststroke</li><li>Division I NCAA college swimmer 1983 &mdash; 1986.</li><li>2014 Fat Salmon 3.2 mi Open Water Swim 1st Pl AG, 1st Pl Overall</li> <li>2015 National Record US Masters Swimming US Postal 4 x 5000 M</li> <li>2015 USMS National Postal 5000 M swim 2nd in Age Group</li> <li>2015 USMS Nationals 4 Golds: 400 IM, 200 IM, 200 Breast, 400 Free</li> <li>2015 FINA USMS World Ranking</li></ul>'
                 },
             ]
         };
@@ -121,6 +121,7 @@ Vue.component('coaches-panel',{
                 text,
                 textLength,
                 elm,
+                shadowElm = vue.$el.querySelector('.quoteShadow'),
                 isActive = coach.active;
 
             function addText() {
@@ -128,14 +129,14 @@ Vue.component('coaches-panel',{
                 if (char == '<') {
                     while (text.charAt(count) != '>' && count < textLength) count++;
                 }
-                elm.innerHTML = text.substr(0, count);
+                elm.innerHTML = shadowElm.innerHTML = text.substr(0, count);
                 count++;
                 if (count < textLength) {
                     vue.coachTmo = setTimeout(addText,10);
                 } else {
                     vue.coachTmo = setTimeout(function() {
                         vue.toggle(coach);
-                    },5000);
+                    },10000);
                 }
             }
             vue.coaches.forEach(function(coach) {
@@ -145,12 +146,13 @@ Vue.component('coaches-panel',{
                 clearTimeout(vue.coachTmo);
             }
             vue.coachTmo = null;
+            shadowElm.innerHTML = '';
 
             coach.active = !isActive;
             if (coach.active) {
                 setTimeout(function() {
                     elm = vue.$el.querySelector('.active .coachQuote');
-                    elm.innerHTML = '';
+                    elm.innerHTML = shadowElm.innerHTML = '';
                     text = coach.quote;
                     textLength = text.length;
                     vue.$nextTick(addText);
