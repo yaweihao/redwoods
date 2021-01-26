@@ -112,11 +112,15 @@ a img {
 #content h1, #content h2, #content h3 {
     text-shadow: 4px 4px 2px #bbb;
 }
-
+#content .mail-list-note {
+    font-size: 0.8em;
+    font-weight: 200;
+}
 #viewFromHome,#atThePool {
     float: right;
+    height: 240px;
     margin: 0 8px 8px;
-    max-width: 60%;
+    width: 240px;
 }
 #atThePool {
     display: none;
@@ -134,6 +138,7 @@ div.clr {
 }
 div.atAGlance {
     border: 1px solid #aaa;
+    clear: both;
     margin: 10px 4px;
     padding: 8px;
 }

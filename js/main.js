@@ -1,6 +1,26 @@
+function mailTo(person) {
+   var who = {
+           tom: 'tom @ grandine . org',
+           mike: 'margaux56 * aol . com',
+           tatyana: 'tat ya na * every day creative . net',
+           steve: 'swim guy 24 * gmail . com',
+           list: ' mi - redwoods - request * freelists . org'
+       };
+    function email(str) {
+        var target = who[str] || str;
+        return target.replace(/\s+/g,'').replace(/\*/,'@');
+    }
+    return 'mailto:' + email(person);
+}
+
 Vue.component('home-panel',{
     name: 'HomePanel',
     template: '#home-template',
+    methods: {
+        mailto: function(who) {
+            return mailTo(who);
+        }
+    }
 });
 Vue.component('coaches-panel',{
     name: 'CoachesPanel',
@@ -16,7 +36,7 @@ Vue.component('coaches-panel',{
                     img: './images/coaches/swimcoach.gif',
                     inits: 'DY',
                     lastName: 'Young',
-                    quote: '"Derek moved to Seattle in April of 2018. Immediately prior to moving, Derek served as the Head Coach of the Sandhills Sand Sharks in Southern Pines, North Carolina and started the Masters swim program in Southern Pines. Before that he spent three years with Nation’s Capital Swim Team (NCAP) and the Arlington Aquatic Club. During his eight years on deck he has worked with swimmers of all ages and achievement levels.  <br><br> Derek’s swimming career started in the Northern Virginia Swim League (NVSL) when he was 6 years old with an ill-fated relay appearance for the Lincolnia Park Lazers. In addition to his local summer league team, Derek also swam for the Arlington Aquatic Club for 10 years. In 2000, Derek graduated with a degree in marketing from the University of Maryland. At Maryland he was a member of the varsity swim team and letter winner."'
+                    quote: '"Derek moved to Seattle in April of 2018. Immediately prior to moving, Derek served as the Head Coach of the Sandhills Sand Sharks in Southern Pines, North Carolina and started the Masters swim program in Southern Pines. Before that he spent three years with Nation\'s Capital Swim Team (NCAP) and the Arlington Aquatic Club. During his eight years on deck he has worked with swimmers of all ages and achievement levels.  <br><br> Derek\'s swimming career started in the Northern Virginia Swim League (NVSL) when he was 6 years old with an ill-fated relay appearance for the Lincolnia Park Lazers. In addition to his local summer league team, Derek also swam for the Arlington Aquatic Club for 10 years. In 2000, Derek graduated with a degree in marketing from the University of Maryland. At Maryland he was a member of the varsity swim team and letter winner."'
                 },
                 {
                     active: false,
@@ -110,7 +130,10 @@ Vue.component('coaches-panel',{
             return 'click for ' + coach.firstName + '\'s bio';
         },
         email: function(coach) {
-            return 'mailto:' + coach.email;
+            return mailTo(coach.email);
+        },
+        mailto: function(coach) {
+            return mailTo(coach.email);
         },
         coachName: function(coach) {
             return [coach.firstName + coach.lastName].join(' ');
@@ -189,7 +212,7 @@ Vue.component('faq-panel',{
                     q: 'How much does it cost to swim?',
                     a: {
                         clas: 'costs',
-                        html: 'You can choose to pay quarterly if you plan to swim full-time, by the month, or by punch card. Quarterly and monthly MSC members pay a <span class="msc">reduced amount</span>.  <span class="line"><span class="term">Quarterly</span><span class="cost">$325/<span class="msc">$160</span></span></span> <span class="line"><span class="term">Monthly</span><span class="cost">$120/<span class="msc">$60</span></span></span> <span class="line note">A 10-swim virtual punch-card is <b>$120</b>; or you can drop-in for any individual workout for <b>$12</b>.</span> <span class="line note">Young Masters (35 and under) can join for a quarterly rate of <b>$250</b>.</span> <p style="display: none; font-weight: normal;"> Note - our contract with Mercerwood Shoreclub will be renewed during 2019. You can lock in the current rate by paying <b>$1300</b> for a yearly membership.  </p>'
+                        html: 'You can choose to pay quarterly if you plan to swim full-time, by the month, or by punch card. Quarterly and monthly MSC members pay a <span class="msc">reduced amount</span>.  <span class="line"><span class="term">Quarterly</span><span class="cost">$350/<span class="msc">$175</span></span></span> <span class="line"><span class="term">Monthly</span><span class="cost">$130/<span class="msc">$65</span></span></span> <span class="line note">You can drop-in for any individual workout for <b>$13</b>; prepayment for multiple workouts is available.</span> <span class="line note">Young Masters (35 and under) can join for a quarterly rate of <b>$270</b>, or a monthly rate of <b>$100</b>.</span>'
                     },
                 },
                 {
@@ -203,14 +226,14 @@ Vue.component('faq-panel',{
                     q: 'Who are the coaches?',
                     a: {
                         clas: '',
-                        html: 'We are currently honored to have Derek Young run 4 weekly workouts; on Wednesdays we depend on one of several of our own members as a fill-in <em>guest coach</em>.  Currently, certified coaches include Tom Grandine, Mike Schaeffer, Alex Goldstein, Tom Robertson, Adair Dingle, Q Glaze, Steve Sussex, Steve Underbrink, and Shannon McIntyre. Read more about all of our coaches <a href="#coaches" rel="coaching" class="navItem">here</a>.'
+                        html: 'We <!--are currently honored to have Derek Young run 4 weekly workouts; on Wednesdays we--> depend many of our own members to fill-in as <em>guest coach</em>.  Currently, certified coaches include Tom Grandine, Mike Schaeffer, Alex Goldstein, Tom Robertson, Adair Dingle, Q Glaze, Mark Loftis, Steve Sussex, and Steve Underbrink, and a host of others!<br/><br/>Are you interested in coaching? <a target="_blank" href="https://www.signupgenius.com/go/10c0d49aea922a4f9cf8-coaching">Sign up here!</a><!--Read more about all of our coaches <a href="#coaches" rel="coaching" class="navItem">here</a>.-->'
                     }
                 },
                 {
                     q: 'Are guests welcome?',
                     a: {
                         clas: '',
-                        html: 'By all means, yes. Those of you who haven\'t committed to swim with us regularly, but would nevertheless like to make appearances at our workouts from time to time, are welcome to do so. Please feel free to swim with us as often as you\'d like. The drop-in fee for guest swimmers is $12; please leave that with the coach on deck as you enter.'
+                        html: 'By all means, yes. Those of you who haven\'t committed to swim with us regularly, but would nevertheless like to make appearances at our workouts from time to time, are welcome to do so. Please feel free to swim with us as often as you\'d like. The drop-in fee for guest swimmers is $13; please leave that with the coach on deck as you enter.'
                     }
                 },
                 {
@@ -224,14 +247,14 @@ Vue.component('faq-panel',{
                     q: 'When are fees due?',
                     a: {
                         clas: '',
-                        html: 'Please arrange to pay for your membership at the beginning of each quarter.  Make your check payable to <em>Mercer Island Redwoods</em> and deliver it to Tom Grandine or Mike Schaeffer at practice. Non-MSC members pay $325/quarter; MSC members pay $160/quarter.'
+                        html: 'Please arrange to pay for your membership at the beginning of each quarter.  Make your check payable to <em>Mercer Island Redwoods</em> and deliver it to Tom Grandine or Mike Schaeffer at practice; or use <a target="_blank" href="https://venmo.com/Thomas-Grandine">Venmo</a>. Non-MSC members pay $350/quarter; MSC members pay $175/quarter.'
                     }
                 },
                 {
                     q: 'What happens on holidays?',
                     a: {
                         clas: '',
-                        html: 'Normally, practices are scheduled for Monday-Friday mornings, regardless of whether or not it\'s a holiday (and, except in the summer, one Saturday morning each month). Check with the coach, or Tom Grandine or Mike Schaeffer at practice as each holiday draws near in case there are any exceptions; or check the workout/coaching schedule <a href="#schedule" rel="calendar" class="navItem">here</a>.'
+                        html: 'Normally, practices are scheduled for Monday-Friday mornings, regardless of whether or not it\'s a holiday (and, except in the summer, one Saturday morning each month). Check with the coach, or Tom Grandine or Mike Schaeffer at practice as each holiday draws near in case there are any exceptions<!--; or check the workout/coaching schedule <a href="#schedule" rel="calendar" class="navItem">here</a>-->.'
                     }
                 },
             ]
@@ -246,20 +269,16 @@ Vue.component('contact-panel',{
             who: {
                 tom: 'tom @ grandine . org',
                 mike: 'margaux56 * aol . com',
+                tatyana: 'tat ya na * every day creative . net',
+                steve: 'swim guy * gmail . com',
                 list: ' mi - redwoods - request * freelists . org'
             }
         };
     },
     methods: {
-        email: function(str) {
-            var vue = this,
-                who = vue.who[str];
-            return who.replace(/\s+/g,'').replace(/\*/,'@');
-        },
         mailto: function(who) {
-            var vue = this;
-            return 'mailto:' + vue.email(who);
-        },
+            return mailTo(who);
+        }
     }
 });
 
@@ -287,8 +306,8 @@ Vue.component('contact-panel',{
                 active: 'home',
                 actions: [
                     {href: '#home', name: 'Home'},
-                    {href: '#coaches', name: 'Coaches'},
-                    {href: '#schedule', name: 'Schedule'},
+                    // {href: '#coaches', name: 'Coaches'},
+                    // {href: '#schedule', name: 'Schedule'},
                     {href: '#faq', name: 'FAQ'},
                     {href: '#contact', name: 'Contact'}
                 ]
@@ -332,4 +351,3 @@ Vue.component('contact-panel',{
     });
     buildVue();
 }());
-

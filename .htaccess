@@ -1,0 +1,8 @@
+Redirect permanent /calendar /#schedule
+Redirect permanent /coaches  /#coaches
+Redirect permanent /contact  /#contact
+Redirect permanent /faq      /#faq
+Redirect permanent /home     /
+Redirect permanent /schedule /#schedule
+
+ErrorDocument 404 "<h1>Page not found</h1>"
