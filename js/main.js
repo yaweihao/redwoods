@@ -1,6 +1,7 @@
 function mailTo(person) {
    var who = {
-           tom: 'tom @ grandine . org',
+           tom: 'tom * grandine . org',
+           alex: 'a_s_gold * hotmail . com',
            mike: 'margaux56 * aol . com',
            tatyana: 'tat ya na * every day creative . net',
            steve: 'swim guy 24 * gmail . com',
