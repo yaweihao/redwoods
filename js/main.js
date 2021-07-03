@@ -255,7 +255,7 @@ Vue.component('faq-panel',{
                     q: 'What happens on holidays?',
                     a: {
                         clas: '',
-                        html: 'Normally, practices are scheduled for Monday-Friday mornings, regardless of whether or not it\'s a holiday (and, except in the summer, one Saturday morning each month). Check with the coach, or Tom Grandine or Mike Schaeffer at practice as each holiday draws near in case there are any exceptions<!--; or check the workout/coaching schedule <a href="#schedule" rel="calendar" class="navItem">here</a>-->.'
+                        html: 'Normally, practices are scheduled for Monday-Friday mornings, regardless of whether or not it\'s a holiday. Check with the coach, or Tom Grandine or Alex Goldstein at practice as each holiday draws near in case there are any exceptions<!--; or check the workout/coaching schedule <a href="#schedule" rel="calendar" class="navItem">here</a>-->.'
                     }
                 },
             ]
