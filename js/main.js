@@ -227,7 +227,7 @@ Vue.component('faq-panel',{
                     q: 'Who are the coaches?',
                     a: {
                         clas: '',
-                        html: 'We <!--are currently honored to have Derek Young run 4 weekly workouts; on Wednesdays we--> depend many of our own members to fill-in as <em>guest coach</em>.  Currently, certified coaches include Tom Grandine, Mike Schaeffer, Alex Goldstein, Tom Robertson, Adair Dingle, Q Glaze, Mark Loftis, Steve Sussex, and Steve Underbrink, and a host of others!<br/><br/>Are you interested in coaching? <a target="_blank" href="https://www.signupgenius.com/go/10c0d49aea922a4f9cf8-coaching">Sign up here!</a><!--Read more about all of our coaches <a href="#coaches" rel="coaching" class="navItem">here</a>.-->'
+                        html: 'We <!--are currently honored to have Derek Young run 4 weekly workouts; on Wednesdays we--> depend many of our own members to spend an occasional morning coaching rather than swimming. We\'d love to see you on deck if you\'re game. You\'re free to invent your own workout, or one will be provided for you if you\'d rather be more engaged as coach than as workout writer.<br/><br/> <a target="_blank" href="https://www.signupgenius.com/go/10c0d49aea922a4f9cf8-coaching">Sign up here!</a><!--Read more about all of our coaches <a href="#coaches" rel="coaching" class="navItem">here</a>.-->'
                     }
                 },
                 {
