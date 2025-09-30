@@ -1,0 +1,252 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mercer Island Redwoods - A Masters Swim Group</title>
+    <script src="https://progressier.com/client/script.js?id=LXYKdgWrwMX1G2onMIqq"></script>
+    <meta name="Description" content="Masters Swim Group in Mercer Island, Washington">
+    <meta name="keywords" content="Masters Swim,Mercer Island,Swim,Masters">
+    <link type="text/css" rel="stylesheet" href="css/main.css">
+    <link rel="canonical" href="https://redwoods.freehostia.com/">
+</head>
+<body>
+    <div id="container">
+        <div id="banner">
+            <img src="./images/mercer-island-redwoods.png" alt="">
+            <h2 style="font-style:italic" id="lda"> lignum durum antiquum
+                <span>&mdash; old hard wood</span>
+            </h2>
+        </div>
+
+        <div id="main-content"></div>
+
+        <div id="footer">
+            <div id="usms_logo">
+                <a target="_blank" href="//www.usms.org/"><img src="./images/USMS_Logo_Horz_tm_100x19.jpg" alt="usms logo"></a>
+            </div>
+            <div id="copyright">
+                Copyright &copy; 2010-<span id="footerCopyrightYear">2013</span> Mercer Island Redwoods &nbsp;&nbsp; All rights reserved.
+            </div>
+        </div>
+    </div>
+
+<script type="vue-template/text" id="content-template">
+<div id="content">
+    <div id="nav">
+        <a class="navItem" v-for="act in actions" :class="isActive(act)":href="act.href" @click="navTo($event,act.href)">
+            {{act.name}}
+        </a>
+    </div>
+    <div id="body">
+        <div v-show="active === 'home'">
+            <transition name="fade">
+                <home-panel></home-panel>
+            </transition>
+        </div>
+        <div v-show="active === 'coaches'">
+            <transition name="fade">
+                <coaches-panel></coaches-panel>
+            </transition>
+        </div>
+        <div v-show="active === 'schedule'">
+            <transition name="fade">
+                <schedule-panel></schedule-panel>
+            </transition>
+        </div>
+        <div v-show="active === 'faq'">
+            <transition name="fade">
+                <faq-panel></faq-panel>
+            </transition>
+        </div>
+        <div v-show="active === 'contact'">
+            <transition name="fade">
+                <contact-panel></contact-panel>
+            </transition>
+        </div>
+    </div>
+</div>
+</script>
+
+<script type="text/plain" id="home-template">
+<div id="home">
+
+    <h2>A Masters Swim Group in Mercer Island, Washington</h2>
+
+    <div class="atAGlance">
+        <h3>Join the <a class="popupWindow" target="popupWindow" href="http://www.freelists.org/list/mi-redwoods">Redwoods mailing list</a> for updates! <span
+        class="mail-list-note">(or manage your subscription)</span></h3>
+        <table id="atAGlance">
+            <tr>
+                <th>Who</th>
+                <td colspan="2">All are welcome! Please bring your <a target="_blank" href="http://www.usms.org/reg/">USMS membership</a> card. <span class="required">Required</span></td>
+            </tr>
+            <tr>
+                <th>Where</th>
+                <td colspan="2">Mercerwood Shore Club &mdash; <a target="_blank" href="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=4150+E+Mercer+Way,+Mercer+Island,+WA+98040&amp;sll=47.587743,-122.241346&amp;sspn=0.272774,0.582275&amp;ie=UTF8&amp;hq=&amp;hnear=4150+E+Mercer+Way,+Mercer+Island,+King,+Washington+98040&amp;t=h&amp;ll=47.570713,-122.205852&amp;spn=0.002678,0.006813&amp;z=14&amp;output=embed">
+                        4150 E. Mercer Way, Mercer Island, Wa.</a><br>
+                        A six-lane, 25-meter seasonal outdoor pool
+                </td>
+            </tr>
+            <tr>
+                <th>When</th>
+                <td colspan="2">Monday through Friday, 5:30am&ndash;7:00am</td>
+            </tr>
+            <tr>
+                <th>Co$t</th>
+                <td>
+                    <table>
+                        <tr>
+                            <td> General </td>
+                            <td> $380/quarter; $140/month; $14/drop-in</td>
+                        </tr>
+                        <tr>
+                            <td> Young Masters (<em>35 and younger)</em></td>
+                            <td> $280/quarter; $110/month; $11/drop-in</td>
+                        </tr>
+                        <tr>
+                            <td> MSC Members </td>
+                            <td> $190/quarter; $70/month; $14/drop-in</td>
+                        </tr>
+                    </table>
+                <p>Quarters start: Jan, April, July, and October</p>
+                <p>We accept cash, personal check (payable to <em>Mercer Island Redwoods</em>), or Venmo at <a target="_blank" href="https://venmo.com/Thomas-Grandine?txn=pay&note=Mercer+Island+Redwoods+dues">@Thomas-Grandine</a> (code=<strong class="required">4302</strong>).<br>
+                We also accept Zelle and PayPal (contact <a :href="mailto('alex')">Alex</a> for info).</p>
+                </td>
+            </tr>
+            <tr>
+              <th>Coaching</th>
+              <td>
+                <a target="coaches" href="https://www.gomotionapp.com/team/pnscaat/page/system/coaches#:~:text=her%20bachelor%27s%20degree.-,Kieran,-Schaefer">Kieran Schaefer</a>, our coach, is on deck daily except for Wednesday, when <a target="coaches" href="https://www.gomotionapp.com/team/pnscaat/page/system/coaches#:~:text=Husky%20sport%20teams.-,Gardner,-Howland">Gardner Howland</a> takes over.<br/>
+              </td>
+            </tr>
+            <tr>
+                <th>Huh?</th>
+                <td colspan="2">
+                    Questions? Contact <a :href="mailto('tatyana')">Tatyana</a>, <a :href="mailto('steve')">Steve</a>, or <a :href="mailto('alex')">Alex</a>.
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="welcome">
+        <!-- img id="viewFromHome" alt="The view from our pool" title="The view from our pool" src="./images/viewFromHome.png"-->
+        <img id="redwoodsAtWork" alt="Redwoods at work" title="Redwoods at work" src="./images/redwoodsAtWork.jpg">
+        <p style="font-style:italic;font-size:93%;">
+            We are the Mercer Island Redwoods, a group of adult swimmers affiliated with United States
+            Masters Swimming (<a target="usms" href="http://www.usms.org">www.usms.org</a>) who take
+            both our swimming and our fun seriously. We emphasize fitness, conditioning, and community,
+            but we have our competitive streak, too, and we support the swimming goals of all our
+            members. People of all skill levels and all adult ages are always welcome to drop
+            in and sample the experience or join the fun as a regular. Your first swim is on us.</p>
+        <p>
+            Our group has been together at the <a target="msc" href="http://www.mercerwood.com/">Mercerwood
+            Shore Club</a> pool since the mid 1990s, but dates back to the 1980s, at least. The group currently
+            includes swimmers in their early 20s to their 80s, and everywhere between.
+        </p>
+    </div>
+    <ul>
+        <li>
+            Join our
+            <a class="popupWindow" target="popupWindow" href="http://www.freelists.org/list/mi-redwoods">mailing list</a> to stay on top of any news.</li>
+        <li>Are you leaving us? Stay in touch if you can, but to leave the mailing list, go <a class="popupWindow" target="popupWindow"
+        href="http://www.freelists.org/list/mi-redwoods">here</a>, enter your email and select <b>Unsubscribe</b>.</li>
+        </li>
+    </ul>
+</div>
+</script>
+
+<script type="text-plain" id="coaches-template">
+<div id="coaches">
+    <h2> Coaches </h2>
+    <p>
+        Our coach:
+    </p>
+    <ul>
+        <li>
+            Derek Young runs workouts 4 mornings a week, from 5:30-7:00am. He may follow a somewhat
+            standard Masters pattern (distance/IM/sprint) through the week; or might surprise us with a
+            new workout themes completely out of the blue; they're never exactly the same.
+        </li>
+
+        <li>
+            In addition, one of our own swimmers takes the deck each Wednesday morning
+            to run a workout; these are always <em>entertaining!</em>
+        </li>
+    </ul>
+
+    <div class="coachList">
+        <div v-for="coach in coaches" :class="coachClass(coach)">
+            <div class="name" @click="toggle(coach)" :title="title(coach)">
+                <span class="fname">{{ coach.firstName }}</span>
+                {{ coach.lastName }}
+            </div>
+            <div :class="{coachInfo: true, active: coach.active}">
+                <img class="coachPic" :alt="coachName(coach)" :src="coach.img">
+                <blockquote class="coachQuote" v-html="coach.quote"></blockquote>
+                <span class="emailLine">Email
+                    <a class="emailRel" :href="mailto(coach)"> {{coach.firstName}}</a>
+                 </span>
+            </div>
+        </div>
+        <div class="quoteShadow"><!-- used to grow parent div as a coach quote (absolute) is populated --></div>
+    </div>
+</div>
+</script>
+
+
+<script type="text/plain" id="schedule-template">
+    <div id="schedule" style="left: 0px;">
+        <a name="calendar"></a>
+        <iframe src="http://www.google.com/calendar/embed?src=pd2gdne8ii9vrra4ehrpt0sccg%40group.calendar.google.com&amp;ctz=America/Los_Angeles" style="border: 0" scrolling="no" frameborder="0">
+        </iframe>
+
+    </div>
+</script>
+
+<script type="text/plain" id="faq-template">
+    <div id="faq-section">
+        <h1>Frequently Asked Questions</h1>
+        <h3>with frequently given answers</h3>
+
+        <p>
+            Although the group has been together for more than 25 years, the Mercer
+            Island Redwoods formed as an official organization in June, 2010. Here are
+            answers to several questions that arose as the group was getting started:<br><br>
+            <span style="font-size: 90%;" id="faqInstructions">questions are <em>clickable</em></span>
+        </p>
+
+        <ol id="faq">
+            <li v-for="q in qas">
+                <span class="question" @click="toggleActive(q.a)" v-html="q.q"></span>
+                <div class="answer" :class="q.a.clas" v-html="q.a.html"></div>
+            </li>
+        </ol>
+    </div>
+</script>
+
+<script type="text/plain" id="contact-template">
+    <div id="contact-us" style="left: 0px;"><h2> Contact Us </h2>
+    <p>
+        You can contact our group in one of these ways:
+    </p>
+
+    <ul>
+        <li>
+            Join (or update your membership on) our mailing list, at <a href="http://www.freelists.org/list/mi-redwoods">http://www.freelists.org/list/mi-redwoods</a>,
+            or simply send an email to <a v-text="mailto('list')" :href="mailto('list')"></a>.<br>
+            This is a private list (to avoid spam). After you've joined, you'll receive all club-wide emails.<br/><br/>
+        </li>
+        <li>
+            Email one of the Redwood headwoods:
+            <a :href="mailto('tatyana')">Tatyana</a> or
+            <a :href="mailto('alex')">Alex</a>.
+        </li>
+    </ul>
+</div>
+</script>
+
+<script src="https://unpkg.com/vue@2.5.22/dist/vue.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

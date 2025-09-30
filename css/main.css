@@ -1,0 +1,260 @@
+body {
+    background-color: #e6eef2;
+    background: #fcfcfc 0 0 repeat;
+    color: #000;
+    font-family: sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+.required {
+    color: magenta;
+}
+a img {
+    border: none;
+}
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.5s;
+}
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
+}
+#container {
+    background-color: #f0f5f7;
+    border: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    flex-flow: column;
+    min-height: 98vh;
+    position: relative;
+    width: 100%;
+}
+#banner {
+    background: url(../images/waterfly.jpg) -2px -1px no-repeat;
+    border-bottom: 1px solid #bbb;
+    min-height: 12vh;
+    max-height: 160px;
+    width: 100%;
+}
+#banner img {
+    margin: 10px 4px;
+    max-width: 100%;
+}
+#banner h2 {
+    color: #555;
+    cursor: pointer;
+    font-size: 105%;
+    font-style: italic;
+    margin: -12px 0 0;
+    padding: 0 0 0.5em 0.5em;
+    text-shadow: 4px 4px 2px #bbb;
+}
+#banner h2 span {
+    cursor: default;
+    font-size: 95%;
+    opacity: 0;
+    transition: opacity 1.5s ease-out;
+}
+#banner h2 span.show {
+    opacity: 1;
+    transition: opacity 0.5s ease-in;
+}
+#nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0.4em 1em;
+}
+#nav a.navItem {
+    color: #444;
+    font-size: 93%;
+    margin: 0 0 2px;
+    padding: 2px 6px;
+    text-decoration: none;
+    text-shadow: 2px 2px 3px #444;
+}
+#nav a.last {
+    margin-top: 36px;
+}
+#nav a.active {
+    color: #44c;
+    text-decoration: underline;
+}
+#nav a.navItem: hover {
+    /* background-color: #fff; */
+    color: blue;
+    text-decoration: none;
+    text-shadow: 2px 2px 3px #22d;
+}
+#nav a.active: hover {
+    background-color: inherit;
+}
+#copyright {
+    position: absolute;
+    bottom: 4px;
+    right: 8px;
+    font-size: 70%;
+    color: #444;
+}
+#usms_logo {
+    position: absolute;
+    bottom: 2px;
+    left: 8px;
+}
+#content {
+    background-color: #f0f5f7;
+    flex: 2;
+    padding: 1em 1.5em 2em;
+    position: relative;
+}
+#content h2 {
+    margin-top: 0;
+}
+#content h1, #content h2, #content h3 {
+    text-shadow: 4px 4px 2px #bbb;
+}
+#content .mail-list-note {
+    font-size: 0.8em;
+    font-weight: 200;
+}
+#viewFromHome,#atThePool {
+    float: right;
+    height: 240px;
+    margin: 0 8px 8px;
+    width: 240px;
+}
+#atThePool {
+    display: none;
+}
+#footer {
+    background-color: #e6eef2;
+    border-top: 1px solid #ddd;
+    font-size: 60%;
+    padding: 0.1em 1em;
+    text-align: right;
+}
+div.clr {
+    clear: both;
+    height: 1px;
+}
+div.atAGlance {
+    border: 1px solid #aaa;
+    clear: both;
+    margin: 10px 4px;
+    padding: 8px;
+}
+#atAGlance caption {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+}
+#atAGlance th, #atAGlance td {
+    border: 1px dotted #ccc;
+    padding: 3px;
+    margin: 1px;
+    text-align: left;
+}
+#atAGlance th {
+    width: 100px;
+}
+
+/* Coaches */
+
+#content div.coach {
+    clear: both;
+    display: flex;
+    margin: 12px 0 0 28px;
+    position: relative
+}
+#content div.coach div.name {
+    font-weight: bold;
+    width: 45%;
+}
+#content div.coach blockquote {
+    margin: 0;
+}
+/* .coachList { */
+/*     display: flex; */
+/*     flex-direction: column; */
+/* } */
+.coachList .quoteShadow {
+    width: 80%;
+    visibility: hidden;
+}
+
+#coaches div.name: hover {
+    color: #22f;
+}
+#coaches span.emailLine {
+    display: block;
+    margin-top: 10px;
+    /* visibility: hidden; */
+}
+#coaches .coachInfo {
+    display: none;
+    font-size: 13px;
+    position: absolute;
+    right: 4px;
+    top: -140px;
+    width: 75%;
+    z-index: 10;
+}
+#coaches .coach.active .coachInfo {
+    background-color: #eee;
+    border: 1px solid #aaa;
+    display: block;
+    padding: 8px;
+}
+#coaches .coach.active .coachInfo img {
+    float: right;
+    margin: 6px 10px 6px 20px;
+    max-width: 45%;
+}
+/* schedule */
+#schedule iframe {
+    width: 90vw;
+    height: 75vw;
+}
+
+/* FAQ */
+#faq span.question {
+    cursor: pointer;
+    font-weight: bold;
+}
+#faq div.answer {
+    display: none;
+}
+#faq div.answer.active {
+    display: block;
+    margin-bottom: 16px;
+}
+#faq div.costs span.line {
+    display: block;
+    font-weight: normal;
+    margin: 6px 0;
+}
+#faq .costs .line span {
+    display: inline-block;
+}
+#faq .costs span.term {
+    width: 120px;
+    margin-left: 10px;
+}
+#faq .costs span.cost {
+    width: 240px;
+}
+#faq .costs .msc {
+    color: #888;
+}
+#faq li {
+    margin-bottom: 8px;
+}
+#faq li .active {
+    border: 1px dotted #bbb;
+    border-radius: 5px;
+    box-shadow: 4px 8px 16px #888;
+    margin-top: 2px;
+    padding: 6px;
+}
