@@ -124,7 +124,15 @@ function attachMailLinks(context = document) {
     const key = node.getAttribute('data-mail');
     const email = decodeMail(key);
     node.href = `mailto:${email}`;
-    node.textContent = email;
+    
+    // Special handling for contact section names
+    if (key === 'tatyana') {
+      node.textContent = 'Tatyana';
+    } else if (key === 'alex') {
+      node.textContent = 'Alex';
+    } else {
+      node.textContent = email;
+    }
   });
 }
 
@@ -148,7 +156,7 @@ function makeCoachCard(coach, index, options = {}) {
 
   const renderEmail = () => {
     if (coach.email) {
-      return `<p class="coach-email"><a data-mail="${coach.email}"></a></p>`;
+      return `<p class="coach-email"><a href="mailto:${coach.email}">Contact</a></p>`;
     }
     return '';
   };
