@@ -813,6 +813,62 @@ ul {
   .hero {
     height: clamp(420px, 96vw, 520px);
   }
+
+  .hero-overlay {
+    padding: clamp(1.5rem, 4vw, 2.5rem);
+    gap: 0.8rem;
+  }
+
+  .hero-cta {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.6rem;
+  }
+
+  .button {
+    padding: 0.9rem 1.4rem;
+    font-size: 0.95rem;
+    justify-content: center;
+  }
+
+  .schedule-photo img {
+    height: clamp(200px, 40vw, 300px);
+    width: 100%;
+  }
+
+  .schedule-media {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: clamp(1.8rem, 8vw, 2.4rem);
+    line-height: 1.2;
+  }
+
+  .tagline {
+    font-size: clamp(0.95rem, 4vw, 1.1rem);
+  }
+
+  .hero-chips {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .hero-chip {
+    flex: none;
+    width: 100%;
+  }
+
+  .section {
+    padding: clamp(3rem, 6vw, 4rem) clamp(1rem, 4vw, 2rem);
+  }
+
+  .section:first-of-type {
+    padding-top: clamp(2.5rem, 5vw, 3.5rem);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
