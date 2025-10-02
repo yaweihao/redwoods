@@ -98,7 +98,7 @@ const faqs = [
   },
   {
     q: 'Are guests welcome?',
-    html: "By all means, yes. Those of you who haven't committed to swim with us regularly, but would nevertheless like to make appearances at our workouts from time to time, are welcome to do so. Please feel free to swim with us as often as you'd like. The drop-in fee for guest swimmers is $13; please leave that with the coach on deck as you enter.",
+    html: "By all means, yes. Those of you who haven't committed to swim with us regularly, but would nevertheless like to make appearances at our workouts from time to time, are welcome to do so. Please feel free to swim with us as often as you'd like. The drop-in fee for guest swimmers is $14; please leave that with the coach on deck as you enter.",
   },
   {
     q: 'Is USMS registration required?',
