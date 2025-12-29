@@ -26,13 +26,6 @@ const currentCoaches = [
 
 const alumniCoaches = [
   {
-    firstName: 'Derek',
-    lastName: 'Young',
-    img: 'images/coaches/swimcoach.gif',
-    email: 'coach.dwyoung@gmailo.com',
-    quote: '"Derek moved to Seattle in April of 2018. Immediately prior to moving, Derek served as the Head Coach of the Sandhills Sand Sharks in Southern Pines, North Carolina and started the Masters swim program in Southern Pines. Before that he spent three years with Nation\'s Capital Swim Team (NCAP) and the Arlington Aquatic Club. During his eight years on deck he has worked with swimmers of all ages and achievement levels.  <br><br> Derek\'s swimming career started in the Northern Virginia Swim League (NVSL) when he was 6 years old with an ill-fated relay appearance for the Lincolnia Park Lazers. In addition to his local summer league team, Derek also swam for the Arlington Aquatic Club for 10 years. In 2000, Derek graduated with a degree in marketing from the University of Maryland. At Maryland he was a member of the varsity swim team and letter winner."',
-  },
-  {
     firstName: 'Tom',
     lastName: 'Grandine',
     img: 'images/coaches/TomG.png',
