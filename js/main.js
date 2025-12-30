@@ -318,10 +318,11 @@ function handleReveal() {
 }
 
 function updateYear() {
-  const el = document.querySelector('[data-year]');
-  if (el) {
-    el.textContent = new Date().getFullYear();
-  }
+  const els = document.querySelectorAll('[data-year]');
+  const currentYear = new Date().getFullYear();
+  els.forEach((el) => {
+    el.textContent = currentYear;
+  });
 }
 
 document.addEventListener('DOMContentLoaded', () => {

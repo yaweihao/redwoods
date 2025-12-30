@@ -447,6 +447,36 @@ ul {
   border: 1px solid rgba(20, 33, 43, 0.08);
 }
 
+.section-shell h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  color: var(--brand-navy);
+}
+
+.section-shell h2 {
+  margin: 2rem 0 1rem;
+  font-size: clamp(1.3rem, 3vw, 1.6rem);
+  color: var(--brand-blue);
+  font-weight: 600;
+}
+
+.section-shell p {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+  color: var(--text-main);
+}
+
+.section-shell ul {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+  color: var(--text-main);
+}
+
+.section-shell li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
 .plan-grid {
   display: grid;
   gap: 1.2rem;
@@ -716,6 +746,27 @@ ul {
   font-style: italic;
   margin: 0;
   white-space: nowrap;
+}
+
+.secret-credit {
+  font-size: 0.5rem !important;
+  opacity: 0.15;
+  font-style: italic;
+  margin: 0;
+  white-space: nowrap;
+  transition: opacity 0.3s ease, font-size 0.3s ease;
+  cursor: default;
+  user-select: none;
+}
+
+.secret-credit:hover {
+  opacity: 0.6;
+  font-size: 0.65rem !important;
+}
+
+.secret-credit:active {
+  opacity: 1;
+  font-size: 0.75rem !important;
 }
 
 .credit-name {
