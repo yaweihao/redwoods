@@ -754,22 +754,24 @@ ul {
   font-style: italic;
   margin: 0;
   white-space: nowrap;
-  transition: opacity 0.3s ease, font-size 0.3s ease;
+  transition: opacity 0.2s ease !important;
   cursor: default;
   user-select: none;
   color: rgba(255,255,255,0.12) !important;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .secret-credit:hover {
-  opacity: 0.7 !important;
-  font-size: 0.7rem !important;
-  color: rgba(255,255,255,0.7) !important;
+  opacity: 0.5 !important;
+  font-size: 0.5rem !important;
+  color: rgba(255,255,255,0.5) !important;
 }
 
 .secret-credit:active {
-  opacity: 1 !important;
-  font-size: 0.8rem !important;
-  color: rgba(255,255,255,0.9) !important;
+  opacity: 0.7 !important;
+  font-size: 0.5rem !important;
+  color: rgba(255,255,255,0.7) !important;
 }
 
 .credit-name {
