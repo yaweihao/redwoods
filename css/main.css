@@ -726,9 +726,23 @@ ul {
 .footer-bottom {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
   gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1 1 auto;
+}
+
+.footer-links {
+  margin: 0;
+  align-self: flex-end;
+  white-space: nowrap;
 }
 
 .footer-inner .usms img {
@@ -760,17 +774,17 @@ ul {
   color: rgba(255,255,255,0.12) !important;
   max-width: 100%;
   overflow: hidden;
+  line-height: 1.2 !important;
+  display: inline-block !important;
 }
 
 .secret-credit:hover {
   opacity: 0.5 !important;
-  font-size: 0.5rem !important;
   color: rgba(255,255,255,0.5) !important;
 }
 
 .secret-credit:active {
   opacity: 0.7 !important;
-  font-size: 0.5rem !important;
   color: rgba(255,255,255,0.7) !important;
 }
 
@@ -916,6 +930,10 @@ ul {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
+  }
+  
+  .secret-credit {
+    font-size: 0.45rem !important;
   }
 }
 
